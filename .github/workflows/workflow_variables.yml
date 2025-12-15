@@ -1,7 +1,12 @@
 name: Testing Workflow Variables
 
 on:
-  workflow_dispatch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+    
+  workflow_dispatch:
 
 env:
   cloud: google-cloud
